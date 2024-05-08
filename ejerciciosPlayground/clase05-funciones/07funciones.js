@@ -1,4 +1,4 @@
-import readline from "readline-sync";
+const readline = require("readline-sync");
 const alquilerVehiculo = () => {
   let tipo = readline.question(`tipo de vehiculo.
  puede optar por vehiculo "compacto" , "mediano" o "camioneta":

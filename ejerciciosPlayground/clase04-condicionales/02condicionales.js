@@ -1,5 +1,4 @@
-import readline from "readline-sync";
-
+const readline = require("readline-sync");
 // condicionales micro-desafio 1
 
 let usuario = readline.question(`

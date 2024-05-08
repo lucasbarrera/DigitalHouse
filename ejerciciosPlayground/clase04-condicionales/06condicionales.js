@@ -1,4 +1,4 @@
-import readline from "readline-sync";
+const readline = require("readline-sync");
 //condicionales dessafio extra
 
 let altura = parseInt(readline.question("ingrese la altura actual del avion "));

@@ -1,6 +1,5 @@
 // condicionales micro-desafio 2
-import readline from "readline-sync";
-
+const readline = require("readline-sync");
 let pagoMes = parseInt(readline.question("ingrese el ultimo pago mensual: "));
 let consumoKWH = parseInt(readline.question("ingrese consumo en KWH: "));
 

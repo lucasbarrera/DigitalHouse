@@ -1,4 +1,4 @@
-import realine from "readline-sync";
+const readline = require("readline-sync");
 
 function cambioAMayusculas(palabra) {
   return palabra.toUpperCase();

@@ -1,4 +1,4 @@
-import readline from "readline-sync";
+const readline = require("readline-sync");
 
 // primera funcion callback
 /**

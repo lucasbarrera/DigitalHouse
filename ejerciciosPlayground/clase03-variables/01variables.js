@@ -1,4 +1,4 @@
-import readline from "readline-sync";
+const readline = require("readline-sync");
 /* 
 let userName = readline.question("ingrese su nombre: ");
 console.log("Hola ", userName); */
@@ -6,35 +6,41 @@ console.log("Hola ", userName); */
 // Ejercicio 1
 
 let cliente = {
-    nombre: "Lucas",
-    apellido:"Barrera",
-    edad:31,
-    numTelefono:3804333333,
-    socio:true,
-    numSilla:345,
-    precio:345.23
-}
+  nombre: "Lucas",
+  apellido: "Barrera",
+  edad: 31,
+  numTelefono: 3804333333,
+  socio: true,
+  numSilla: 345,
+  precio: 345.23,
+};
 console.log(cliente);
 console.log(` 
-${typeof(cliente.edad)} 
-${typeof(cliente.nombre)}
-${typeof(cliente.apellido)}
-${typeof(cliente.numSilla)}
-${typeof(cliente.numTelefono)}
-${typeof(cliente.socio)}
-${typeof(cliente.precio)}
+${typeof cliente.edad} 
+${typeof cliente.nombre}
+${typeof cliente.apellido}
+${typeof cliente.numSilla}
+${typeof cliente.numTelefono}
+${typeof cliente.socio}
+${typeof cliente.precio}
 `);
-
 
 //Ejercicio 2
 let nombre = "David";
 let apellido = "Garcia";
 let sueldoActual = 400000;
 let porcentajeAumento = 50;
-let calculoAumento = ((sueldoActual * porcentajeAumento)/100);
+let calculoAumento = (sueldoActual * porcentajeAumento) / 100;
 let nuevoSueldo = calculoAumento + sueldoActual;
-console.log("En base a su sueldo actual de " +sueldoActual +" Ha recibido un aumento del " + 
-porcentajeAumento+"% " + "y su nuevo sueldo es: " + nuevoSueldo);
+console.log(
+  "En base a su sueldo actual de " +
+    sueldoActual +
+    " Ha recibido un aumento del " +
+    porcentajeAumento +
+    "% " +
+    "y su nuevo sueldo es: " +
+    nuevoSueldo
+);
 
 /* let porcentajeAumento = 25
 let porcentajeAumento2 = 15
