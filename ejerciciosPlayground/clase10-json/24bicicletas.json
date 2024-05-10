@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "marca": "Olmo",
+    "modelo": "Regal",
+    "rodado": "29",
+    "anio": "2022",
+    "color": "roja",
+    "peso": "16",
+    "tipo": "Montañera",
+    "precio": "120000",
+    "vendida": "si"
+  },
+  {
+    "id": "2",
+    "marca": "Venzo",
+    "modelo": "Eolo",
+    "rodado": "29",
+    "anio": "2022",
+    "color": "negro",
+    "peso": "16",
+    "tipo": "Montañera",
+    "precio": "220000",
+    "vendida": "no"
+  },
+  {
+    "id": "3",
+    "marca": "Orbe",
+    "modelo": "Alma",
+    "rodado": "29",
+    "anio": "2022",
+    "color": "blanco",
+    "peso": "13",
+    "tipo": "Montañera",
+    "precio": "320000",
+    "vendida": "no"
+  }
+]
