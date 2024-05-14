@@ -5,7 +5,8 @@ function leerArchivo() {
   return JSON.parse(archivo);
 }
 
-console.log(leerArchivo);
+console.log(leerArchivo());
 module.exports = {
   leerArchivo,
 };
+// El veloz murcielago
