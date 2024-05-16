@@ -9,4 +9,3 @@ console.log(leerArchivo());
 module.exports = {
   leerArchivo,
 };
-// El veloz murcielago

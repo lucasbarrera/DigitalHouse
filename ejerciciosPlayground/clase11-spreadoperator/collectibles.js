@@ -1,27 +1,21 @@
 const fs = require("fs");
-function distingirMarca(marca) {
+function importar(marca) {
   let objeto = {};
   switch (marca) {
-    case "Star Wars":
-      let StarWars = fs.readFileSync("./datos/figuras3");
-      objeto = JSON.parse(StarWars);
-      break;
     case "Hot Toys":
-      let HotToys = fs.readFileSync("./datos/figuras1");
-      objeto = JSON.parse(HotToys);
-      break;
+      objeto = fs.readFileSync("./datos/figuras1.json", "utf-8");
+      return JSON.parse(objeto);
     case "Bandai":
-      let Bandai = fs.readFileSync("./datos/figuras2");
-      objeto = JSON.parse(Bandai);
-      break;
+      objeto = fs.readFileSync("./datos/figuras2.json", "utf-8");
+      return JSON.parse(objeto);
+    case "Star Wars":
+      objeto = fs.readFileSync("./datos/figuras3.json", "utf-8");
+      return JSON.parse(objeto);
     default:
       break;
   }
-  return objeto;
 }
 
-console.log(distingirMarca("Bandai"));
-
 module.exports = {
-  distingirMarca,
+  importar,
 };
