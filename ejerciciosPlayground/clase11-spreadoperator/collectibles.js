@@ -25,3 +25,4 @@ console.log(distingirMarca("Bandai"));
 module.exports = {
   distingirMarca,
 };
+// entegar tarea de playground para el dia jueves 23
