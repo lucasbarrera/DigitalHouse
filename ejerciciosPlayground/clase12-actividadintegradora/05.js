@@ -20,6 +20,10 @@ const concesionaria = {
       return autoEncontrado;
     }
   },
+  autosParaLaVenta: function () {
+    let listaNoVendidos = this.autos.filter((auto) => auto.vendido == false);
+    return listaNoVendidos;
+  },
 };
 
-console.table(concesionaria.venderAuto("APL123"));
+console.log(concesionaria.autosParaLaVenta());
