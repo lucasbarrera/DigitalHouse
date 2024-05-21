@@ -9,21 +9,19 @@ const concesionaria = {
       if (this.autos[i].patente === patente) {
         devolver = this.autos[i];
       }
-      return devolver ? devolver : null;
     }
+    return devolver ? devolver : null;
   },
-
   venderAuto: function (patente) {
-    let autoEncontrado = this.buscarAuto(patente);
-    if (autoEncontrado) {
-      autoEncontrado.vendido = true;
-      return autoEncontrado;
+    let autoFound = this.buscarAuto(patente);
+    if (autoFound && !autoFound.vendido) {
+      // Verifica si se encontró el auto y si no ha sido vendido
+      autoFound.vendido = true;
+      return autoFound;
+    } else {
+      return null;
     }
-  },
-  autosParaLaVenta: function () {
-    let listaNoVendidos = this.autos.filter((auto) => auto.vendido == false);
-    return listaNoVendidos;
   },
 };
-
-console.log(concesionaria.autosParaLaVenta());
+console.log(concesionaria.venderAuto("APL123"));
+console.log(concesionaria.venderAuto("JJK116"));

@@ -1,4 +1,4 @@
-let autosImportados = require("./01");
+let autosImportados = require("./01.js");
 //console.log(autosImportados);
 const concesionaria = {
   /* completar */
@@ -14,10 +14,13 @@ const concesionaria = {
   },
 
   venderAuto: function (patente) {
-    let autoEncontrado = this.buscarAuto(patente);
-    if (autoEncontrado) {
-      autoEncontrado.vendido = true;
-      return autoEncontrado;
+    let autoFound = this.buscarAuto(patente);
+    if (autoFound && !autoFound.vendido) {
+      // Verifica si se encontró el auto y si no ha sido vendido
+      autoFound.vendido = true;
+      return autoFound;
+    } else {
+      return null;
     }
   },
 };
