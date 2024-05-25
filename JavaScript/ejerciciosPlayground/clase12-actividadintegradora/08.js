@@ -1,7 +1,7 @@
 const autos = require("./01.js");
 
 let autosImportados = autos;
-const concecionaria = {
+const concesionaria = {
   autos: autosImportados,
   buscarAuto: function (patente) {
     let autoencontrado = this.autos.find((auto) => auto.patente === patente);
@@ -36,7 +36,16 @@ const concecionaria = {
       .map((auto) => auto.precio);
     return precioAutos;
   },
+  totalDeVentas: function () {
+    let precios = this.listaDeVentas();
+    if (precios.length != 0) {
+      let total = precios.reduce((acc, precio) => acc + precio, 0);
+      return total;
+    }
+  },
 };
 
-console.log(concecionaria.venderAuto("JJK116"));
-console.log(concecionaria.listaDeVentas());
+console.log(concesionaria.venderAuto("JJK116"));
+console.log(concesionaria.venderAuto("APL123"));
+console.log(concesionaria.listaDeVentas());
+console.log(concesionaria.totalDeVentas());

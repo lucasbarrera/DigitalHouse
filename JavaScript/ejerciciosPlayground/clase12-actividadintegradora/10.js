@@ -1,7 +1,12 @@
 const autos = require("./01.js");
 
 let autosImportados = autos;
-const concecionaria = {
+let cliente = {
+  nombre: "Juan",
+  capacidadDePagoEnCuotas: 20000,
+  capacidadDePagoTotal: 100000,
+};
+const concesionaria = {
   autos: autosImportados,
   buscarAuto: function (patente) {
     let autoencontrado = this.autos.find((auto) => auto.patente === patente);
@@ -36,7 +41,33 @@ const concecionaria = {
       .map((auto) => auto.precio);
     return precioAutos;
   },
+  totalDeVentas: function () {
+    let precios = this.listaDeVentas();
+    if (precios.length != 0) {
+      let total = precios.reduce((acc, precio) => acc + precio, 0);
+      return total;
+    }
+  },
+  puedeComprar: function (persona, auto) {
+    let autoFound = this.buscarAuto(auto);
+    if (
+      persona.capacidadDePagoTotal >= autoFound.precio &&
+      persona.capacidadDePagoEnCuotas >= autoFound.precio / autoFound.cuotas
+    ) {
+      return true;
+    } else {
+      return "no puede compar el auto";
+    }
+  },
+  autosQuePuedeComprar: function (persona) {
+    let enVenta = this.autosParaLaVenta();
+    let listaPuedeComprar = [];
+    for (let i = 0; i < enVenta.length; i++) {
+      if (this.puedeComprar(persona, enVenta[i].patente) == true) {
+        listaPuedeComprar.push(enVenta[i]);
+      }
+    }
+    return listaPuedeComprar;
+  },
 };
-
-console.log(concecionaria.venderAuto("JJK116"));
-console.log(concecionaria.listaDeVentas());
+console.log(concesionaria.autosQuePuedeComprar(cliente));
