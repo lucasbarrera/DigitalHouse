@@ -12,3 +12,5 @@ app.listen(3000, (err) => {
     ? console.error("Server failed", err.message)
     : console.log(`server running on http://localhost:${PORT}`);
 });
+
+// res.sendFile(path.join(__dirname,'/'))
