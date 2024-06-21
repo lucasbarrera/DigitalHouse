@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <title>Registro</title>
+  </head>
+  <body>
+      <form action="" class="formulario">
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre y Apellido"
+        />
+        <input
+          type="text"
+          name="usuario"
+          id="usuario"
+          placeholder="Nombre de usuario"
+        />
+        <input type="email" name="email" id="email" placeholder="E-mail" />
+        <div class="fecha">
+          <h3>Fecha de nacimiento</h3>
+          <input type="date" name="fecha" id="fecha" />
+        </div>
+        <input
+          type="text"
+          name="domicilio"
+          id="domicilio"
+          placeholder="Domicilio"
+        />
+        <div class="perfil">
+          <h3>Perfil del usuario</h3>
+          <div class="opciones">
+            <input
+              class="input"
+              type="radio"
+              name="comprador"
+              value="comprador"
+            /><label for="comprador">Comprador</label>
+            <input
+              class="input"
+              type="radio"
+              name="vendedor"
+              value="vendedor"
+            /><label for="vendedor">Vendedor</label>
+          </div>
+        </div class="intereses">
+        <h3>Intereses</h3>
+        <div class="categoria">
+          <div class="categoria-input">
+            <input type="checkbox" value="electro" name="electro"/><label for="electro" >Electro</label>
+          </div>
+          <div class="categoria-input">
+            <input type="checkbox" name="moda" value="moda" /><label>Moda</label>
+          </div>
+          <div class="categoria-input">
+            <input type="checkbox" name="hogar" value="hogar" /><label for="hogar"> Hogar</label>
+          </div>
+          <div class="categoria-input">
+            <input type="checkbox" name="jugueteria" value="jugueteria" /><label for="jugueteria">Jugueteria</label>
+          </div>
+          <div class="categoria-input">
+            <input type="checkbox" name="vidasana" value="vidasana" /> <label for="vidasana">Vida sana </label>
+          </div>
+        </div>
+        <input type="file" name="foto" id="foto" />
+        <input type="password" name="password" placeholder="Contraseña" />
+        <input
+          type="password"
+          name="passwordcheck"
+          placeholder="Confirmar Contraseña"
+        />
+        <div class="botones">
+          <input type="submit" name="enviar" id="enviar" value="Confirmar" />
+          <button type="reset">Borrar todo</button>
+        </div>
+      </form>
+  </body>
+</html>
