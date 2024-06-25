@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
 }
+/*seccion de estilos del header */
 .header {
   background-color: #eac926;
   padding-top: 5%;
@@ -67,100 +68,24 @@ body {
     text-decoration: none;
   }
 }
-.main {
-  width: 90%;
+/* seccion de estilos de login  */
+.login {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0px auto;
-}
-.banner {
-  width: 110%;
-  img {
-    width: 100%;
+  input {
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    height: 25px;
+    width: 70%;
+  }
+  .boton-enviar {
+    background-color: #020475;
+    color: white;
   }
 }
-.visita {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.visita--titulo {
-  font-size: 24px;
-  font-weight: bold;
-  align-self: start;
-}
-.articulo {
-  width: 90%;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  padding: 15px;
-  align-items: center;
-}
-.articulo:hover {
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  .nombre {
-    display: block;
-  }
-}
-.imagen {
-  width: 50%;
-}
-.info {
-  border-top: 2px solid #ebebeb;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-.circulo-envio {
-  border: 2px solid rgb(5, 146, 5);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s;
-  .envio {
-    color: rgb(5, 146, 5);
-  }
-}
-.circulo-envio:hover {
-  rotate: -90deg;
-}
-.precio {
-  font-size: 18px;
-  font-weight: 600;
-}
-.descuento {
-  font-size: 18px;
-  font-weight: 600;
-  color: rgb(5, 146, 5);
-}
-.nombre {
-  display: none;
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  color: rgb(77, 81, 83);
-}
-
-.ofertas-titulo {
-  font-size: 24px;
-  font-weight: bold;
-  align-self: start;
-}
-
-/* seccion de footer */
+/* seccion de estilos del footer  */
 .footer {
-  width: 100%;
-  bottom: 0px;
   display: flex;
   flex-direction: column;
   .footer--box {
@@ -196,6 +121,9 @@ body {
 }
 
 @media (width > 360px) {
+  .articulo {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
   .nav {
     display: block;
   }
@@ -217,6 +145,12 @@ body {
   .header--text {
     width: 30%;
   }
+  .login {
+    input {
+      margin: 20px 0px 20px 0px;
+      height: 25px;
+    }
+  }
 
   @media (width > 768px) {
     .enlaces {
@@ -233,7 +167,17 @@ body {
       margin: 0 10px;
     }
   }
-
+  .login {
+    input {
+      margin: 20px 0px 20px 0px;
+      height: 30px;
+    }
+  }
+  .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+  }
   .footer--copy {
     display: flex;
     flex-direction: row;
