@@ -2,23 +2,28 @@
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
-}
-body {
-  background-color: #ebebeb;
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #ebebeb;
+}
 .header {
   background-color: #eac926;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
 }
-
 .first {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.logo-search {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .header--img {
   width: 50%;
@@ -53,7 +58,7 @@ body {
   width: 20px;
   padding: 10px;
   padding: 1%;
-  background-color: #0503b4;
+  background-color: #03264c;
   border-radius: 25%;
 }
 .nav {
@@ -81,83 +86,118 @@ body {
     width: 100%;
   }
 }
+
 .visita {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
+
 .visita--titulo {
   font-size: 24px;
   font-weight: bold;
   align-self: start;
+  margin: 10px 0;
 }
 .articulo {
-  width: 90%;
+  width: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  padding: 15px;
   align-items: center;
 }
 .articulo:hover {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
   .nombre {
-    display: block;
+    visibility: visible;
   }
 }
 .imagen {
   width: 50%;
 }
 .info {
+  position: relative;
   border-top: 2px solid #ebebeb;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  padding: 15px;
+}
+.precio-descuento {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  .precio {
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 30%;
+  }
+  .descuento {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 600;
+    color: #39b54a;
+    width: 70%;
+    margin: 0 5px;
+  }
 }
 .circulo-envio {
-  border: 2px solid rgb(5, 146, 5);
+  border: 1px solid #39b54a;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  padding: 5px;
+  font-size: 16px;
+  display: block;
+  height: 30px;
   display: flex;
-  justify-content: center;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  top: -15px;
   align-items: center;
+  justify-content: center;
   transition: all 0.5s;
   .envio {
-    color: rgb(5, 146, 5);
+    color: #39b54a;
   }
 }
 .circulo-envio:hover {
   rotate: -90deg;
 }
-.precio {
-  font-size: 18px;
-  font-weight: 600;
-}
-.descuento {
-  font-size: 18px;
-  font-weight: 600;
-  color: rgb(5, 146, 5);
-}
+
 .nombre {
-  display: none;
+  visibility: hidden;
   margin-top: 10px;
   font-size: 16px;
   font-weight: 500;
-  color: rgb(77, 81, 83);
+  color: #666;
 }
-
+.ofertas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 .ofertas-titulo {
   font-size: 24px;
+  margin: 10px 0;
   font-weight: bold;
   align-self: start;
 }
 
 /* seccion de footer */
+.piedepagina {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .footer {
   width: 100%;
   bottom: 0px;
@@ -175,7 +215,10 @@ body {
   i {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #0e11ac;
+    color: #03264c;
+  }
+  i:hover {
+    color: #0762c4;
   }
   .box--titulo {
     font-size: 16px;
@@ -187,15 +230,15 @@ body {
     text-align: center;
     margin: 0;
   }
-  .footer--copy {
-    background-color: #fff;
-    font-size: 12px;
-    margin: 0px auto;
-    text-align: center;
-  }
+}
+.footer-copy {
+  background-color: #fff;
+  font-size: 12px;
+  margin: 0px;
+  text-align: center;
 }
 
-@media (width > 360px) {
+@media (min-width: 361px) {
   .nav {
     display: block;
   }
@@ -203,41 +246,87 @@ body {
     display: none;
   }
   .first {
+    flex-direction: row;
+    .header--img {
+      width: 50%;
+    }
+    .header--search {
+      width: 50%;
+    }
+    .header--text {
+      width: 30%;
+    }
+    .logo-search {
+      width: 70%;
+    }
+    .leyenda {
+      width: 30%;
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .enlaces {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
   }
-  .header--img {
-    width: 30%;
+  .nav--list {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
   }
-  .header--search {
-    width: 30%;
+  .visita {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .header--text {
-    width: 30%;
+  .articulo {
+    width: 45%;
   }
-
-  @media (width > 768px) {
-    .enlaces {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .nav--list {
-      display: flex;
-      flex-direction: row;
-      margin: 0 auto;
-    }
-    .list--item {
-      margin: 0 10px;
-    }
+  .ofertas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-
+  .piedepagina {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 769px) {
+  .enlaces {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav--list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .list--item {
+    margin: 0 10px;
+  }
+  .visita {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .articulo {
+    width: 23%;
+  }
   .footer--copy {
     display: flex;
     flex-direction: row;
     justify-self: center;
     margin: 0 auto;
+  }
+
+  .footer {
+    flex-direction: row;
   }
 }
